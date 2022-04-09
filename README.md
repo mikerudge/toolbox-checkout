@@ -45,7 +45,7 @@ The data is stored in memory, so restarting the server will reset the data.
 
 There is a very simple storybook app setup just to showcase how structure of the components can work with storybook.
 
-![Storybook Screenshot](demo1.gif)
+![Storybook Screenshot](https://i.ibb.co/4Jtr1QK/Screenshot-2022-04-09-at-22-16-21.png)
 
 ## Demo
 
@@ -57,9 +57,9 @@ There is a very simple storybook app setup just to showcase how structure of the
 
 ![App Screenshot](demo2.gif)
 
-## Support
+## Questions / Feedback
 
-For support, email mikerudge@me.com
+If you have any queries or feedback, please feel free to reach out to me mikerudge@me.com
 
 ## Optimizations
 
