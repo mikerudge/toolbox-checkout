@@ -45,7 +45,13 @@ The data is stored in memory, so restarting the server will reset the data.
 
 ## Demo
 
-![App Screenshot](https://i.ibb.co/Qm9997g/2022-04-09-21-40-41.gif)
+### Payment Modal Demo
+
+![App Screenshot](demo1.gif)
+
+### Applying a Promo Code
+
+![App Screenshot](demo2.gif)
 
 ## Support
 
