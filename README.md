@@ -1,4 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Toolbox Checkout
+
+![GitHub last commit](https://img.shields.io/github/last-commit/mikerudge/toolbox-checkout)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/mikerudge/toolbox-checkout)
+
+![GitHub top language](https://img.shields.io/github/languages/top/mikerudge/toolbox-checkout)
+
+Thanks for taking the time to look over my submission for the take home assignment, I hope that this hits the brief and would be happy to discuss the decisions further.
 
 ## Getting Started
 
@@ -12,20 +20,108 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You should now see a simple page with an input. Enter an number between 1-4 to see the corresponding order.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Notes
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Available Data
 
-## Learn More
+- There are 4 demo orders [1 - 4], you can find them in [mockData/orders](mockData/orders.ts)
+- There are also 4 demo discount codes, which you can find here [mockData/discountCodes](mockData/discountCodes.ts)
+  - 123
+  - 234
+  - 345
+  - 456
 
-To learn more about Next.js, take a look at the following resources:
+### Promo Code Functionality
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+On the order page you can use on of the promotional codes and you should see the total re calculated with the discount code.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Each promo code has a usage limit, if you use the same code more than the limit, the discount will not be applied.
+
+Each promo code has a type [percentage, fixed], if the type is percentage, the discount will be applied as a percentage of the total.
+
+The data is stored in memory, so restarting the server will reset the data.
+
+## Demo
+
+Insert gif or link to demo
+
+## Support
+
+For support, email mikerudge@me.com
+
+## Screenshots
+
+![App Screenshot](https://i.ibb.co/DDpXXhs/Screenshot-2022-04-09-at-21-26-28.png)
+
+## Roadmap
+
+- Additional browser support
+
+- Add more integrations
+
+## Related
+
+Here are some related projects
+
+[Awesome README](https://github.com/matiassingers/awesome-readme)
+
+## Optimizations
+
+What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
+
+![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Lessons Learned
+
+What did you learn while building this project? What challenges did you face and how did you overcome them?
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
+```
+
+## Feedback
+
+If you have any feedback, please reach out to us at fake@fake.com
+
+## Features
+
+- Light/dark mode toggle
+- Live previews
+- Fullscreen mode
+- Cross platform
+
+## FAQ
+
+#### Question 1
+
+Answer 1
+
+#### Question 2
+
+Answer 2
+
+## Documentation
+
+[Documentation](https://linktodocumentation)
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm run deploy
+```
 
 ## Deploy on Vercel
 
