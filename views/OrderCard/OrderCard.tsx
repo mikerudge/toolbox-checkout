@@ -46,12 +46,21 @@ const OrderCard = (props: OrderCardProps) => {
 							Your premium includes Insurance premium tax (IPT) at 12%
 						</p>
 					</div>
-					<OrderItemRow title='Policy Type' value={props.policyType ?? ""} />
 					<OrderItemRow
+						canEdit
+						title='Policy Type'
+						value={props.policyType ?? ""}
+					/>
+					<OrderItemRow
+						canEdit
 						title='Cover Level'
 						value={formatNumberToCurrency(props.coverLevel)}
 					/>
-					<OrderItemRow title='Type of Cover' value={props.typeOfCover ?? ""} />
+					<OrderItemRow
+						canEdit
+						title='Type of Cover'
+						value={props.typeOfCover ?? ""}
+					/>
 				</section>
 				<Divider />
 				<section className='my-8'>
