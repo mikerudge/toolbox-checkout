@@ -23,7 +23,13 @@ const OrderPage = () => {
 			</Head>
 			<div className=' mt-24'>
 				<div className='prose'>
-					<h1>Just add payment and you’re covered</h1>
+					<h1 className='mb-0 text-xl text-midnight'>
+						Just add payment and you’re covered
+					</h1>
+					<p className='mt-1 text-slate-500'>
+						Look over everything below carefully, make any adjustments needed or
+						continue to the payment page to finalise your order.{" "}
+					</p>
 					{orderNumber && (
 						<OrderCard
 							orderNumber={orderNumber}
