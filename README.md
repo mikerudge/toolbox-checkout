@@ -60,7 +60,3 @@ There is a very simple storybook app setup just to showcase how structure of the
 ## Questions / Feedback
 
 If you have any queries or feedback, please feel free to reach out to me mikerudge@me.com
-
-## Optimizations
-
-What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
