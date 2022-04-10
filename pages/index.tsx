@@ -1,19 +1,23 @@
 import Head from "next/head"
-import { useState } from "react"
+import { useRouter } from "next/router"
+import { FormEvent } from "react"
 
 import Button from "../components/Button"
 import Card from "../components/Card"
 import Input from "../components/Input"
-import { useOrder } from "../hooks/useOrder"
 
 import type { NextPage } from "next"
-import { useRouter } from "next/router"
 const Home: NextPage = () => {
-	const { order, isLoading, hasError } = useOrder("1")
 	const router = useRouter()
-	const [orderNumber, setOrderNumber] = useState<number>(1)
 
-	const handleRouteToOrder = () => {
+	const handleRouteToOrder = (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault()
+
+		const target = e.target as typeof e.target & {
+			orderNumber: { value: string }
+		}
+		const orderNumber = target.orderNumber.value
+
 		if (orderNumber) {
 			router.push(`/orders/${orderNumber}`)
 		}
@@ -34,14 +38,15 @@ const Home: NextPage = () => {
 
 						<p className='m-0'>Enter your order number below to get started</p>
 					</div>
-
-					<Input
-						onChange={(e) => setOrderNumber(parseInt(e.target.value))}
-						placeholder='1'
-						label='Order Number (1-4)'
-						type={"number"}
-					/>
-					<Button onClick={handleRouteToOrder}>Take me to my order</Button>
+					<form onSubmit={handleRouteToOrder}>
+						<Input
+							name='orderNumber'
+							placeholder='1'
+							label='Order Number (1-4)'
+							type={"number"}
+						/>
+						<Button type='submit'>Take me to my order</Button>
+					</form>
 				</Card>
 			</div>
 		</div>
