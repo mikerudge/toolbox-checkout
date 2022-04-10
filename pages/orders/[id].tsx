@@ -5,6 +5,12 @@ import React, { useState } from "react"
 import OrderCard from "../../views/OrderCard"
 import PaymentModal from "../../views/PaymentModal"
 
+/**
+ * I realise this might be a little contrived, as I could fetch the data with getStaticProps.
+ * However, I wanted to show a common example of putting data close to the components.
+ *
+ * In a real world example of this, I would probably fetch the data for the page and pass it to the component.
+ */
 const OrderPage = () => {
 	const router = useRouter()
 	const [showModal, setShowModal] = useState<boolean>(false)
