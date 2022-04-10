@@ -1,4 +1,5 @@
 import { PencilIcon } from "@heroicons/react/solid"
+import IconButton from "../IconButton"
 
 type OrderItemRowProps = {
 	title: string
@@ -18,12 +19,7 @@ const OrderItemRow = (props: OrderItemRowProps) => {
 				</div>
 			</div>
 			{props.canEdit ? (
-				<button
-					title='edit'
-					className='flex h-10 w-10 items-center justify-center rounded-full bg-sky-50 p-1 text-sky-500 transition-colors hover:bg-sky-100 hover:text-sky-600'
-				>
-					<PencilIcon width={18} height={18} />
-				</button>
+				<IconButton title='edit' icon={<PencilIcon width={18} height={18} />} />
 			) : null}
 		</div>
 	)
